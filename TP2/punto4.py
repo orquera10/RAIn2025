@@ -4,7 +4,8 @@ from nltk.corpus import stopwords
 
 # Párrafo original
 parrafo = """
-Los sistemas recomendadores son herramientas enfocadas a ayudar a los usuarios a obtener aquella información que mejor se corresponda con sus intereses y preferencias.
+Los sistemas recomendadores son herramientas enfocadas a ayudar a los usuarios a 
+obtener aquella información que mejor se corresponda con sus intereses y preferencias.
 """
 
 # Tokenizar solo palabras
@@ -27,3 +28,4 @@ for bg in bigrams:
 print("\n🔹 3-gramas:")
 for tg in trigrams:
     print(" -", tg)
+

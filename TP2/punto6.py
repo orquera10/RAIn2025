@@ -10,9 +10,8 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 from collections import Counter
 import pandas as pd
 
-
 # ============================
-# A. 🧹 ELIMINACIÓN DE RUIDO
+# A. ELIMINACIÓN DE RUIDO
 # ============================
 
 # Cargar el texto del archivo 'cg73'
@@ -21,42 +20,37 @@ raw_text = brown.words(fileids='cg73')
 # Eliminar puntuación y caracteres no alfabéticos
 text_clean = [word for word in raw_text if word.isalpha()]
 
-
 # ============================
-# B. ✂️ TOKENIZACIÓN
+# B. TOKENIZACIÓN
 # ============================
 
 # Ya está tokenizado, solo seguimos con la lista limpia
 tokens = text_clean
 
-
 # ============================
-# C. 🔄 NORMALIZACIÓN
+# C. NORMALIZACIÓN
 # ============================
 
 # Pasar todo a minúsculas
 tokens_norm = [word.lower() for word in tokens]
 
-
 # ============================
-# D. ❌ ELIMINACIÓN DE STOPWORDS
+# D. ELIMINACIÓN DE STOPWORDS
 # ============================
 
 stop_words = set(stopwords.words('english'))
 tokens_no_stop = [word for word in tokens_norm if word not in stop_words]
 
-
 # ============================
-# E. 📊 TOP 50 PALABRAS FRECUENTES
+# E. TOP 50 PALABRAS FRECUENTES
 # ============================
 
 freq_50 = Counter(tokens_no_stop).most_common(50)
 print("\nE. 50 palabras más frecuentes (sin stopwords):")
 print(freq_50)
 
-
 # ============================
-# F. 🌱 STEMMING
+# F. STEMMING
 # ============================
 
 stemmer = PorterStemmer()
@@ -65,9 +59,8 @@ freq_stemmed_50 = Counter(stemmed_tokens).most_common(50)
 print("\nF. 50 palabras más frecuentes (Stemming):")
 print(freq_stemmed_50)
 
-
 # ============================
-# G. 🌿 LEMATIZACIÓN
+# G. LEMATIZACIÓN
 # ============================
 
 lemmatizer = WordNetLemmatizer()
@@ -76,9 +69,8 @@ freq_lemmatized_50 = Counter(lemmatized_tokens).most_common(50)
 print("\nG. 50 palabras más frecuentes (Lematización):")
 print(freq_lemmatized_50)
 
-
 # ============================
-# H. 📌 LEMATIZACIÓN CON PoS
+# H. LEMATIZACIÓN CON PoS
 # ============================
 
 # Función para mapear etiquetas PoS
@@ -96,9 +88,8 @@ freq_lemmatized_pos_50 = Counter(lemmatized_pos).most_common(50)
 print("\nH. 50 palabras más frecuentes (Lematización con PoS):")
 print(freq_lemmatized_pos_50)
 
-
 # ============================
-# I. 📋 TABLA DE PRIMEROS 30 TOKENS
+# I. TABLA DE PRIMEROS 30 TOKENS
 # ============================
 
 data = {
