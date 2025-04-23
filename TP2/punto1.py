@@ -26,8 +26,8 @@ tokens_limpios = [t for t in tokens if t not in stop_words]
 frecuencia = FreqDist(tokens_limpios)
 
 # Mostrar las 20 palabras más frecuentes
-print("Términos más frecuentes:")
-for palabra, freq in frecuencia.most_common(20):
+print("Listado de frecuencia de terminos (descendente):")
+for palabra, freq in frecuencia.most_common():
     print(f"{palabra}: {freq}")
 
 # Gráfico de barras
