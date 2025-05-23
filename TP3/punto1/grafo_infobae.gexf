@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2025-05-23">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="https://www.infobae.com/deportes/2025/05/23/la-tajante-decision-que-tomo-el-manchester-united-en-medio-de-su-crisis-institucional" />
+      <node id="1" label="https://www.infobae.com/deportes/2025/05/23/franco-colapinto-afrontara-las-primeras-practicas-del-gran-premio-de-monaco-con-alpine-hora-tv-y-todo-lo-que-hay-que-saber" />
+      <node id="2" label="https://www.infobae.com/deportes/2025/05/23/impacto-en-el-futbol-argentino-angel-di-maria-tomo-una-decision-respecto-a-su-futuro-profesional" />
+      <node id="3" label="https://www.infobae.com/deportes/2025/05/22/las-sorpresivas-declaraciones-de-un-jugador-de-brasil-hoy-la-seleccion-importa-cero" />
+      <node id="4" label="https://www.infobae.com/deportes/2025/05/23/colapinto-hablo-tras-quedar-ultimo-en-el-primer-dia-de-actividad-en-monaco-de-las-dificultades-del-coche-a-los-problemas-por-el-trafico" />
+      <node id="5" label="https://www.infobae.com/deportes/2025/05/23/los-3-argentinos-que-real-madrid-tiene-en-carpeta-para-reforzar-el-equipo-de-xabi-alonso" />
+      <node id="6" label="https://www.infobae.com/deportes/2025/05/23/tiene-cinco-habitaciones-y-costo-mas-de-12-millones-de-dolares-el-lujoso-yate-que-max-verstappen-compro-en-monaco" />
+      <node id="7" label="https://www.infobae.com/deportes/2025/05/23/haran-una-prueba-piloto-en-la-ciudad-de-buenos-aires-para-la-vuelta-de-los-hinchas-visitantes-tras-12-anos" />
+      <node id="8" label="https://www.infobae.com/deportes/2025/05/22/conmocion-por-la-muerte-de-una-boxeadora-de-25-anos-la-dura-acusacion-a-los-medicos-por-un-diagnostico-tardio-de-cancer" />
+      <node id="9" label="https://www.infobae.com/deportes/2025/05/23/el-gesto-ironico-de-verstappen-a-colapinto-en-medio-de-la-segunda-practica-del-gp-de-monaco-en-la-f1" />
+      <node id="10" label="https://www.infobae.com/deportes/2025/05/23/la-estrella-del-futbol-mundial-que-podria-ser-companero-de-lionel-messi-en-el-inter-miami" />
+      <node id="11" label="https://www.infobae.com/deportes/2025/05/23/la-frase-con-la-que-flavio-briatore-respaldo-a-franco-colapinto-y-apunto-contra-jack-doohan" />
+      <node id="12" label="https://www.infobae.com/deportes/2025/05/23/el-sueno-de-faustino-oro-en-el-masters-de-sharjah-esta-a-un-paso-de-alcanzar-su-primera-norma-de-gran-maestro" />
+      <node id="13" label="https://www.infobae.com/deportes/2025/05/22/un-fanatico-se-tatuo-a-franco-colapinto-y-estallaron-los-memes-el-detalle-en-la-imagen-que-lo-volvio-viral" />
+      <node id="14" label="https://www.infobae.com/deportes/2025/05/23/el-fuerte-choque-de-frente-de-oscar-piastri-en-la-segunda-practica-del-viernes-en-monaco" />
+      <node id="15" label="https://www.infobae.com/deportes/2025/05/22/tension-en-brasil-el-video-de-la-entrevista-con-philippe-coutinho-que-fue-interrumpida-por-una-balacera" />
+      <node id="16" label="https://www.infobae.com/deportes/2025/05/23/ronaldo-dejo-de-ser-propietario-del-valladolid-la-millonaria-cifra-por-la-que-vendio-sus-acciones" />
+      <node id="17" label="https://www.infobae.com/deportes/2025/05/23/la-accidentada-jornada-de-viernes-en-monaco-tres-banderas-rojas-doble-golpe-de-hadjar-y-la-dura-sancion-a-stroll-por-chocar-con-leclerc" />
+      <node id="18" label="https://www.infobae.com/deportes/2025/05/23/newells-elimino-a-defensa-y-espera-por-boca-o-atletico-tucuman-en-octavos-asi-esta-el-cuadro-de-la-copa-argentina" />
+      <node id="19" label="https://www.infobae.com/deportes/2025/05/23/se-iniciaron-conversaciones-el-poderoso-de-europa-que-acelero-por-franco-mastantuono-y-puso-en-alerta-a-river-plate" />
+      <node id="20" label="https://www.infobae.com/deportes/2025/05/22/colapinto-le-explico-a-su-companero-pierre-gasly-como-se-prepara-el-mejor-mate-el-video-de-la-reaccion-del-frances-al-probar" />
+      <node id="21" label="https://www.infobae.com/deportes/2025/05/23/la-dura-sancion-que-recibio-el-jugador-de-gimnasia-de-jujuy-que-quebro-al-delantero-de-nueva-chicago" />
+      <node id="22" label="https://www.infobae.com/deportes/2025/05/23/las-revelaciones-de-fernando-tornello-la-voz-de-la-formula-1-sobre-el-futuro-de-colapinto-en-alpine" />
+      <node id="23" label="https://www.infobae.com/deportes/2025/05/23/inter-enfrenta-al-como-y-napoli-recibe-a-cagliari-en-una-definicion-apasionante-para-conocer-al-campeon-de-la-serie-a" />
+      <node id="24" label="https://www.infobae.com/deportes/2025/05/22/el-rapto-de-furia-de-novak-djokovic-en-el-atp-250-de-ginebra-no-es-un-buen-ejemplo" />
+      <node id="25" label="https://www.infobae.com/deportes/2025/05/23/papelon-del-santos-en-la-vuelta-de-neymar-quedo-eliminado-de-la-copa-de-brasil-ante-un-equipo-de-segunda" />
+      <node id="26" label="https://www.infobae.com/deportes/2025/05/22/colapinto-volvio-a-hablar-sobre-los-comentarios-abusivos-a-sus-rivales-en-redes-y-se-refirio-a-los-pedidos-de-briatore" />
+      <node id="27" label="https://www.infobae.com/deportes/2025/05/22/en-europa-afirman-que-alpine-le-hizo-una-oferta-a-checo-perez-que-pasara-con-franco-colapinto-en-la-f1" />
+      <node id="28" label="https://www.infobae.com/deportes/2025/05/23/quienes-son-las-dos-promesas-de-river-que-firmaron-contrato-y-el-club-los-blindo-con-clausulas-millonarias" />
+      <node id="29" label="https://www.infobae.com/deportes/2025/05/22/insolita-secuencia-en-brasil-convirtio-un-gol-de-penal-pero-no-pudo-festejar-porque-se-desgarro" />
+      <node id="30" label="https://www.infobae.com/deportes/2025/05/21/franco-colapinto-se-subio-al-simulador-de-alpine-y-explico-como-se-maneja-en-monaco-uno-de-los-circuitos-mas-desafiantes" />
+      <node id="31" label="https://www.infobae.com/deportes/2025/05/22/real-madrid-anuncio-la-despedida-de-luka-modrid-del-club-tras-13-temporadas-me-cambio-la-vida-como-jugador-y-persona" />
+      <node id="32" label="https://www.infobae.com/deportes/2025/05/13/sorpresa-en-el-mundo-del-tenis-andy-murray-dejo-de-ser-el-entrenador-de-djokovic-antes-de-roland-garros" />
+      <node id="33" label="https://www.infobae.com/deportes/2025/05/21/los-mejores-memes-por-la-eliminacion-de-river-ante-platense-las-burlas-de-los-hinchas-de-boca-y-el-rol-de-falcon-perez-los-elegidos" />
+      <node id="34" label="https://www.infobae.com/deportes/2025/03/10/quien-es-giorgio-costantini-el-volante-brasileno-al-que-gallardo-hizo-debutar-en-el-triunfo-de-river-ante-atletico-tucuman" />
+      <node id="35" label="https://www.infobae.com/deportes/2025/05/22/la-decision-que-habria-tomado-el-united-con-garnacho-tras-sus-duras-criticas-por-la-derrota-en-la-final-ante-tottenham" />
+      <node id="36" label="https://www.infobae.com/deportes/2025/05/17/angel-di-maria-anuncio-que-se-marchara-del-benfica-al-final-de-la-temporada" />
+      <node id="37" label="https://www.infobae.com/deportes/2024/11/27/la-historia-de-la-joya-brasilena-de-river-que-busca-el-titulo-con-la-reserva-y-ya-entreno-con-gallardo" />
+      <node id="38" label="https://www.infobae.com/deportes/2025/04/28/franco-mastantuono-el-talentoso-joven-del-que-hablan-todos-los-planes-de-river-plate-y-el-interes-de-los-gigantes-de-europa" />
+      <node id="39" label="https://www.infobae.com/deportes/2025/05/16/briatore-revelo-los-tres-pedidos-que-le-hizo-a-colapinto-para-sostenerlo-como-piloto-en-alpine" />
+      <node id="40" label="https://www.infobae.com/deportes/2025/05/20/franco-colapinto-correra-el-gp-de-monaco-de-formula-1-este-fin-de-semana-dias-horarios-y-todos-los-detalles-de-su-actividad" />
+      <node id="41" label="https://www.infobae.com/deportes/2025/05/07/el-controvertido-video-de-ronaldo-en-presunto-estado-de-ebriedad-que-profundizo-la-crisis-con-los-ultras-del-valladolid" />
+      <node id="42" label="https://www.infobae.com/deportes/2025/05/22/el-giro-estrategico-de-la-formula-1-para-el-gran-premio-de-monaco-como-afectara-a-los-pilotos" />
+      <node id="43" label="https://www.infobae.com/deportes/2025/05/21/el-tottenham-de-cuti-romero-se-enfrentara-al-manchester-united-de-garnacho-por-el-titulo-de-la-europa-league-hora-tv-y-formaciones" />
+      <node id="44" label="https://www.infobae.com/deportes/2025/02/24/la-preocupante-situacion-economica-que-atraviesa-el-manchester-united-el-recorte-a-los-juveniles-del-club-que-llamo-la-atencion" />
+      <node id="45" label="https://www.infobae.com/deportes/2025/05/17/el-pedido-de-colapinto-a-sus-fanaticos-tras-los-insultos-racistas-que-recibio-tsunoda-por-un-gesto-obsceno-en-imola" />
+      <node id="46" label="https://www.infobae.com/deportes/2025/03/13/el-show-de-colapinto-en-el-gp-de-australia-le-hizo-probar-mate-a-vowles-repartio-galletitas-y-lanzo-un-frase-sobre-su-futuro" />
+      <node id="47" label="https://www.infobae.com/deportes/2025/05/16/que-hace-este-tipo-la-queja-de-verstappen-por-una-maniobra-de-colapinto-en-la-segunda-practica-del-gp-de-imola" />
+      <node id="48" label="https://www.infobae.com/deportes/2024/11/01/la-divertida-prueba-de-williams-a-sus-mecanicos-tras-el-efecto-colapinto-que-respondieron-tras-probar-el-mate-por-primera-vez" />
+      <node id="49" label="https://www.infobae.com/deportes/2025/05/22/del-me-salio-una-fortuna-sobre-el-smoking-que-uso-al-apodo-de-la-f1-y-el-mate-que-probo-gasly-el-show-de-colapinto-en-monaco" />
+      <node id="50" label="https://www.infobae.com/deportes/2025/05/19/con-neymar-como-protagonista-carlo-ancelotti-sorprendio-con-la-prelista-de-brasil-para-las-eliminatorias-sudamericanas" />
+      <node id="51" label="https://www.infobae.com/deportes/2025/05/16/el-gesto-obsceno-del-japones-yuki-tsunoda-a-franco-colapinto-por-entorpecerlo-en-la-pista" />
+      <node id="52" label="https://www.infobae.com/deportes/2025/02/13/di-maria-en-mi-seleccion-la-exorbitante-oferta-que-rechazo-de-arabia-la-marca-que-le-quedo-por-las-criticas-y-el-gol-que-torcio-su-historia" />
+      <node id="53" label="https://www.infobae.com/deportes/2025/04/26/djokovic-perdio-en-su-debut-del-masters-1000-de-madrid-contra-arnaldi-y-lanzo-una-cruda-reflexion-es-el-ciclo-de-la-vida" />
+      <node id="54" label="https://www.infobae.com/deportes/2025/05/22/el-argentino-nico-varrone-brillo-en-los-tests-y-esta-cada-vez-mas-cerca-de-correr-en-formula-2-sorprendio-al-equipo" />
+      <node id="55" label="https://www.infobae.com/deportes/2024/11/21/la-divertida-clase-de-argentino-de-franco-colapinto-a-alex-albon-la-curiosa-palabra-que-le-enseno-a-decir" />
+    </nodes>
+    <edges>
+      <edge source="0" target="43" id="0" weight="1" />
+      <edge source="0" target="35" id="1" weight="1" />
+      <edge source="0" target="44" id="2" weight="1" />
+      <edge source="0" target="12" id="3" weight="2" />
+      <edge source="0" target="7" id="4" weight="1" />
+      <edge source="0" target="23" id="5" weight="1" />
+      <edge source="0" target="16" id="6" weight="1" />
+      <edge source="0" target="10" id="7" weight="1" />
+      <edge source="0" target="33" id="8" weight="1" />
+      <edge source="0" target="30" id="9" weight="1" />
+      <edge source="1" target="14" id="10" weight="2" />
+      <edge source="1" target="12" id="11" weight="2" />
+      <edge source="1" target="7" id="12" weight="2" />
+      <edge source="1" target="23" id="13" weight="2" />
+      <edge source="1" target="16" id="14" weight="2" />
+      <edge source="1" target="10" id="15" weight="2" />
+      <edge source="2" target="36" id="16" weight="1" />
+      <edge source="2" target="52" id="17" weight="1" />
+      <edge source="2" target="12" id="18" weight="2" />
+      <edge source="2" target="7" id="19" weight="1" />
+      <edge source="2" target="23" id="20" weight="1" />
+      <edge source="2" target="16" id="21" weight="1" />
+      <edge source="2" target="10" id="22" weight="1" />
+      <edge source="2" target="33" id="23" weight="1" />
+      <edge source="2" target="30" id="24" weight="1" />
+      <edge source="3" target="50" id="25" weight="1" />
+      <edge source="3" target="12" id="26" weight="2" />
+      <edge source="3" target="7" id="27" weight="1" />
+      <edge source="3" target="23" id="28" weight="1" />
+      <edge source="3" target="16" id="29" weight="1" />
+      <edge source="3" target="10" id="30" weight="1" />
+      <edge source="3" target="33" id="31" weight="1" />
+      <edge source="3" target="30" id="32" weight="1" />
+      <edge source="4" target="1" id="33" weight="1" />
+      <edge source="4" target="12" id="34" weight="2" />
+      <edge source="4" target="7" id="35" weight="1" />
+      <edge source="4" target="23" id="36" weight="1" />
+      <edge source="4" target="16" id="37" weight="1" />
+      <edge source="4" target="10" id="38" weight="1" />
+      <edge source="4" target="33" id="39" weight="1" />
+      <edge source="4" target="30" id="40" weight="1" />
+      <edge source="5" target="12" id="41" weight="2" />
+      <edge source="5" target="7" id="42" weight="1" />
+      <edge source="5" target="23" id="43" weight="1" />
+      <edge source="5" target="16" id="44" weight="1" />
+      <edge source="5" target="10" id="45" weight="1" />
+      <edge source="5" target="33" id="46" weight="1" />
+      <edge source="5" target="30" id="47" weight="1" />
+      <edge source="6" target="12" id="48" weight="2" />
+      <edge source="6" target="7" id="49" weight="2" />
+      <edge source="6" target="23" id="50" weight="1" />
+      <edge source="6" target="16" id="51" weight="1" />
+      <edge source="6" target="10" id="52" weight="1" />
+      <edge source="6" target="33" id="53" weight="1" />
+      <edge source="6" target="30" id="54" weight="1" />
+      <edge source="7" target="12" id="55" weight="2" />
+      <edge source="7" target="23" id="56" weight="1" />
+      <edge source="7" target="16" id="57" weight="1" />
+      <edge source="7" target="10" id="58" weight="1" />
+      <edge source="7" target="9" id="59" weight="1" />
+      <edge source="7" target="33" id="60" weight="1" />
+      <edge source="7" target="30" id="61" weight="1" />
+      <edge source="8" target="12" id="62" weight="2" />
+      <edge source="8" target="7" id="63" weight="1" />
+      <edge source="8" target="23" id="64" weight="1" />
+      <edge source="8" target="16" id="65" weight="1" />
+      <edge source="8" target="10" id="66" weight="1" />
+      <edge source="8" target="33" id="67" weight="1" />
+      <edge source="8" target="30" id="68" weight="1" />
+      <edge source="9" target="17" id="69" weight="1" />
+      <edge source="9" target="51" id="70" weight="1" />
+      <edge source="9" target="47" id="71" weight="1" />
+      <edge source="9" target="45" id="72" weight="1" />
+      <edge source="9" target="1" id="73" weight="1" />
+      <edge source="9" target="42" id="74" weight="1" />
+      <edge source="9" target="12" id="75" weight="2" />
+      <edge source="9" target="7" id="76" weight="1" />
+      <edge source="9" target="23" id="77" weight="1" />
+      <edge source="9" target="16" id="78" weight="1" />
+      <edge source="9" target="10" id="79" weight="1" />
+      <edge source="9" target="33" id="80" weight="1" />
+      <edge source="9" target="30" id="81" weight="1" />
+      <edge source="10" target="31" id="82" weight="1" />
+      <edge source="10" target="7" id="83" weight="2" />
+      <edge source="10" target="23" id="84" weight="1" />
+      <edge source="10" target="16" id="85" weight="1" />
+      <edge source="10" target="9" id="86" weight="1" />
+      <edge source="10" target="17" id="87" weight="1" />
+      <edge source="10" target="33" id="88" weight="1" />
+      <edge source="10" target="30" id="89" weight="1" />
+      <edge source="11" target="12" id="90" weight="2" />
+      <edge source="11" target="7" id="91" weight="2" />
+      <edge source="11" target="23" id="92" weight="1" />
+      <edge source="11" target="16" id="93" weight="1" />
+      <edge source="11" target="10" id="94" weight="1" />
+      <edge source="11" target="33" id="95" weight="1" />
+      <edge source="11" target="30" id="96" weight="1" />
+      <edge source="12" target="7" id="97" weight="2" />
+      <edge source="12" target="23" id="98" weight="1" />
+      <edge source="12" target="16" id="99" weight="1" />
+      <edge source="12" target="10" id="100" weight="1" />
+      <edge source="12" target="9" id="101" weight="1" />
+      <edge source="12" target="33" id="102" weight="1" />
+      <edge source="12" target="30" id="103" weight="1" />
+      <edge source="13" target="12" id="104" weight="2" />
+      <edge source="13" target="7" id="105" weight="1" />
+      <edge source="13" target="23" id="106" weight="1" />
+      <edge source="13" target="16" id="107" weight="1" />
+      <edge source="13" target="10" id="108" weight="1" />
+      <edge source="13" target="33" id="109" weight="1" />
+      <edge source="13" target="30" id="110" weight="1" />
+      <edge source="14" target="12" id="111" weight="2" />
+      <edge source="14" target="7" id="112" weight="2" />
+      <edge source="14" target="23" id="113" weight="1" />
+      <edge source="14" target="16" id="114" weight="1" />
+      <edge source="14" target="10" id="115" weight="1" />
+      <edge source="14" target="33" id="116" weight="1" />
+      <edge source="14" target="30" id="117" weight="1" />
+      <edge source="15" target="12" id="118" weight="2" />
+      <edge source="15" target="7" id="119" weight="1" />
+      <edge source="15" target="23" id="120" weight="1" />
+      <edge source="15" target="16" id="121" weight="1" />
+      <edge source="15" target="10" id="122" weight="1" />
+      <edge source="15" target="33" id="123" weight="1" />
+      <edge source="15" target="30" id="124" weight="1" />
+      <edge source="16" target="41" id="125" weight="1" />
+      <edge source="16" target="12" id="126" weight="2" />
+      <edge source="16" target="7" id="127" weight="2" />
+      <edge source="16" target="23" id="128" weight="1" />
+      <edge source="16" target="10" id="129" weight="1" />
+      <edge source="16" target="9" id="130" weight="1" />
+      <edge source="16" target="33" id="131" weight="1" />
+      <edge source="16" target="30" id="132" weight="1" />
+      <edge source="17" target="1" id="133" weight="1" />
+      <edge source="17" target="14" id="134" weight="1" />
+      <edge source="17" target="12" id="135" weight="2" />
+      <edge source="17" target="7" id="136" weight="1" />
+      <edge source="17" target="23" id="137" weight="1" />
+      <edge source="17" target="16" id="138" weight="1" />
+      <edge source="17" target="10" id="139" weight="1" />
+      <edge source="17" target="33" id="140" weight="1" />
+      <edge source="17" target="30" id="141" weight="1" />
+      <edge source="18" target="12" id="142" weight="2" />
+      <edge source="18" target="7" id="143" weight="1" />
+      <edge source="18" target="23" id="144" weight="1" />
+      <edge source="18" target="16" id="145" weight="1" />
+      <edge source="18" target="10" id="146" weight="1" />
+      <edge source="18" target="33" id="147" weight="1" />
+      <edge source="18" target="30" id="148" weight="1" />
+      <edge source="19" target="38" id="149" weight="1" />
+      <edge source="19" target="12" id="150" weight="2" />
+      <edge source="19" target="7" id="151" weight="2" />
+      <edge source="19" target="23" id="152" weight="1" />
+      <edge source="19" target="16" id="153" weight="1" />
+      <edge source="19" target="10" id="154" weight="1" />
+      <edge source="19" target="33" id="155" weight="1" />
+      <edge source="19" target="30" id="156" weight="1" />
+      <edge source="20" target="55" id="157" weight="1" />
+      <edge source="20" target="48" id="158" weight="1" />
+      <edge source="20" target="46" id="159" weight="1" />
+      <edge source="20" target="12" id="160" weight="2" />
+      <edge source="20" target="7" id="161" weight="1" />
+      <edge source="20" target="23" id="162" weight="1" />
+      <edge source="20" target="16" id="163" weight="1" />
+      <edge source="20" target="10" id="164" weight="1" />
+      <edge source="20" target="33" id="165" weight="1" />
+      <edge source="20" target="30" id="166" weight="1" />
+      <edge source="21" target="12" id="167" weight="2" />
+      <edge source="21" target="7" id="168" weight="1" />
+      <edge source="21" target="23" id="169" weight="1" />
+      <edge source="21" target="16" id="170" weight="1" />
+      <edge source="21" target="10" id="171" weight="1" />
+      <edge source="21" target="33" id="172" weight="1" />
+      <edge source="21" target="30" id="173" weight="1" />
+      <edge source="22" target="7" id="174" weight="2" />
+      <edge source="22" target="23" id="175" weight="1" />
+      <edge source="22" target="16" id="176" weight="1" />
+      <edge source="22" target="10" id="177" weight="1" />
+      <edge source="22" target="9" id="178" weight="1" />
+      <edge source="22" target="33" id="179" weight="1" />
+      <edge source="22" target="30" id="180" weight="1" />
+      <edge source="23" target="12" id="181" weight="2" />
+      <edge source="23" target="7" id="182" weight="2" />
+      <edge source="23" target="16" id="183" weight="2" />
+      <edge source="23" target="10" id="184" weight="2" />
+      <edge source="23" target="9" id="185" weight="2" />
+      <edge source="24" target="53" id="186" weight="1" />
+      <edge source="24" target="32" id="187" weight="1" />
+      <edge source="24" target="12" id="188" weight="2" />
+      <edge source="24" target="7" id="189" weight="1" />
+      <edge source="24" target="23" id="190" weight="1" />
+      <edge source="24" target="16" id="191" weight="1" />
+      <edge source="24" target="10" id="192" weight="1" />
+      <edge source="24" target="33" id="193" weight="1" />
+      <edge source="24" target="30" id="194" weight="1" />
+      <edge source="25" target="12" id="195" weight="2" />
+      <edge source="25" target="7" id="196" weight="1" />
+      <edge source="25" target="23" id="197" weight="1" />
+      <edge source="25" target="16" id="198" weight="1" />
+      <edge source="25" target="10" id="199" weight="1" />
+      <edge source="25" target="33" id="200" weight="1" />
+      <edge source="25" target="30" id="201" weight="1" />
+      <edge source="26" target="40" id="202" weight="1" />
+      <edge source="26" target="51" id="203" weight="1" />
+      <edge source="26" target="39" id="204" weight="1" />
+      <edge source="26" target="49" id="205" weight="1" />
+      <edge source="26" target="7" id="206" weight="2" />
+      <edge source="26" target="23" id="207" weight="1" />
+      <edge source="26" target="16" id="208" weight="1" />
+      <edge source="26" target="10" id="209" weight="1" />
+      <edge source="26" target="9" id="210" weight="1" />
+      <edge source="26" target="33" id="211" weight="1" />
+      <edge source="26" target="30" id="212" weight="1" />
+      <edge source="27" target="54" id="213" weight="1" />
+      <edge source="27" target="12" id="214" weight="2" />
+      <edge source="27" target="7" id="215" weight="1" />
+      <edge source="27" target="23" id="216" weight="1" />
+      <edge source="27" target="16" id="217" weight="1" />
+      <edge source="27" target="10" id="218" weight="1" />
+      <edge source="27" target="33" id="219" weight="1" />
+      <edge source="27" target="30" id="220" weight="1" />
+      <edge source="28" target="34" id="221" weight="1" />
+      <edge source="28" target="37" id="222" weight="1" />
+      <edge source="28" target="12" id="223" weight="2" />
+      <edge source="28" target="7" id="224" weight="1" />
+      <edge source="28" target="23" id="225" weight="1" />
+      <edge source="28" target="16" id="226" weight="1" />
+      <edge source="28" target="10" id="227" weight="1" />
+      <edge source="28" target="33" id="228" weight="1" />
+      <edge source="28" target="30" id="229" weight="1" />
+      <edge source="29" target="12" id="230" weight="2" />
+      <edge source="29" target="7" id="231" weight="1" />
+      <edge source="29" target="23" id="232" weight="1" />
+      <edge source="29" target="16" id="233" weight="1" />
+      <edge source="29" target="10" id="234" weight="1" />
+      <edge source="29" target="33" id="235" weight="1" />
+      <edge source="29" target="30" id="236" weight="1" />
+    </edges>
+  </graph>
+</gexf>

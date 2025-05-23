@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": 0, "label": "0", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/la-tajante-decision-que-tomo-el-manchester-united-en-medio-de-su-crisis-institucional"}, {"color": "#97c2fc", "id": 1, "label": "1", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/franco-colapinto-afrontara-las-primeras-practicas-del-gran-premio-de-monaco-con-alpine-hora-tv-y-todo-lo-que-hay-que-saber"}, {"color": "#97c2fc", "id": 2, "label": "2", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/impacto-en-el-futbol-argentino-angel-di-maria-tomo-una-decision-respecto-a-su-futuro-profesional"}, {"color": "#97c2fc", "id": 3, "label": "3", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/las-sorpresivas-declaraciones-de-un-jugador-de-brasil-hoy-la-seleccion-importa-cero"}, {"color": "#97c2fc", "id": 4, "label": "4", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/colapinto-hablo-tras-quedar-ultimo-en-el-primer-dia-de-actividad-en-monaco-de-las-dificultades-del-coche-a-los-problemas-por-el-trafico"}, {"color": "#97c2fc", "id": 5, "label": "5", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/los-3-argentinos-que-real-madrid-tiene-en-carpeta-para-reforzar-el-equipo-de-xabi-alonso"}, {"color": "#97c2fc", "id": 6, "label": "6", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/tiene-cinco-habitaciones-y-costo-mas-de-12-millones-de-dolares-el-lujoso-yate-que-max-verstappen-compro-en-monaco"}, {"color": "#97c2fc", "id": 7, "label": "7", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/haran-una-prueba-piloto-en-la-ciudad-de-buenos-aires-para-la-vuelta-de-los-hinchas-visitantes-tras-12-anos"}, {"color": "#97c2fc", "id": 8, "label": "8", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/conmocion-por-la-muerte-de-una-boxeadora-de-25-anos-la-dura-acusacion-a-los-medicos-por-un-diagnostico-tardio-de-cancer"}, {"color": "#97c2fc", "id": 9, "label": "9", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/el-gesto-ironico-de-verstappen-a-colapinto-en-medio-de-la-segunda-practica-del-gp-de-monaco-en-la-f1"}, {"color": "#97c2fc", "id": 10, "label": "10", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/la-estrella-del-futbol-mundial-que-podria-ser-companero-de-lionel-messi-en-el-inter-miami"}, {"color": "#97c2fc", "id": 11, "label": "11", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/la-frase-con-la-que-flavio-briatore-respaldo-a-franco-colapinto-y-apunto-contra-jack-doohan"}, {"color": "#97c2fc", "id": 12, "label": "12", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/el-sueno-de-faustino-oro-en-el-masters-de-sharjah-esta-a-un-paso-de-alcanzar-su-primera-norma-de-gran-maestro"}, {"color": "#97c2fc", "id": 13, "label": "13", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/un-fanatico-se-tatuo-a-franco-colapinto-y-estallaron-los-memes-el-detalle-en-la-imagen-que-lo-volvio-viral"}, {"color": "#97c2fc", "id": 14, "label": "14", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/el-fuerte-choque-de-frente-de-oscar-piastri-en-la-segunda-practica-del-viernes-en-monaco"}, {"color": "#97c2fc", "id": 15, "label": "15", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/tension-en-brasil-el-video-de-la-entrevista-con-philippe-coutinho-que-fue-interrumpida-por-una-balacera"}, {"color": "#97c2fc", "id": 16, "label": "16", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/ronaldo-dejo-de-ser-propietario-del-valladolid-la-millonaria-cifra-por-la-que-vendio-sus-acciones"}, {"color": "#97c2fc", "id": 17, "label": "17", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/la-accidentada-jornada-de-viernes-en-monaco-tres-banderas-rojas-doble-golpe-de-hadjar-y-la-dura-sancion-a-stroll-por-chocar-con-leclerc"}, {"color": "#97c2fc", "id": 18, "label": "18", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/newells-elimino-a-defensa-y-espera-por-boca-o-atletico-tucuman-en-octavos-asi-esta-el-cuadro-de-la-copa-argentina"}, {"color": "#97c2fc", "id": 19, "label": "19", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/se-iniciaron-conversaciones-el-poderoso-de-europa-que-acelero-por-franco-mastantuono-y-puso-en-alerta-a-river-plate"}, {"color": "#97c2fc", "id": 20, "label": "20", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/colapinto-le-explico-a-su-companero-pierre-gasly-como-se-prepara-el-mejor-mate-el-video-de-la-reaccion-del-frances-al-probar"}, {"color": "#97c2fc", "id": 21, "label": "21", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/la-dura-sancion-que-recibio-el-jugador-de-gimnasia-de-jujuy-que-quebro-al-delantero-de-nueva-chicago"}, {"color": "#97c2fc", "id": 22, "label": "22", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/las-revelaciones-de-fernando-tornello-la-voz-de-la-formula-1-sobre-el-futuro-de-colapinto-en-alpine"}, {"color": "#97c2fc", "id": 23, "label": "23", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/inter-enfrenta-al-como-y-napoli-recibe-a-cagliari-en-una-definicion-apasionante-para-conocer-al-campeon-de-la-serie-a"}, {"color": "#97c2fc", "id": 24, "label": "24", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/el-rapto-de-furia-de-novak-djokovic-en-el-atp-250-de-ginebra-no-es-un-buen-ejemplo"}, {"color": "#97c2fc", "id": 25, "label": "25", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/papelon-del-santos-en-la-vuelta-de-neymar-quedo-eliminado-de-la-copa-de-brasil-ante-un-equipo-de-segunda"}, {"color": "#97c2fc", "id": 26, "label": "26", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/colapinto-volvio-a-hablar-sobre-los-comentarios-abusivos-a-sus-rivales-en-redes-y-se-refirio-a-los-pedidos-de-briatore"}, {"color": "#97c2fc", "id": 27, "label": "27", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/en-europa-afirman-que-alpine-le-hizo-una-oferta-a-checo-perez-que-pasara-con-franco-colapinto-en-la-f1"}, {"color": "#97c2fc", "id": 28, "label": "28", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/23/quienes-son-las-dos-promesas-de-river-que-firmaron-contrato-y-el-club-los-blindo-con-clausulas-millonarias"}, {"color": "#97c2fc", "id": 29, "label": "29", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/insolita-secuencia-en-brasil-convirtio-un-gol-de-penal-pero-no-pudo-festejar-porque-se-desgarro"}, {"color": "#97c2fc", "id": 30, "label": "30", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/21/franco-colapinto-se-subio-al-simulador-de-alpine-y-explico-como-se-maneja-en-monaco-uno-de-los-circuitos-mas-desafiantes"}, {"color": "#97c2fc", "id": 31, "label": "31", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/real-madrid-anuncio-la-despedida-de-luka-modrid-del-club-tras-13-temporadas-me-cambio-la-vida-como-jugador-y-persona"}, {"color": "#97c2fc", "id": 32, "label": "32", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/13/sorpresa-en-el-mundo-del-tenis-andy-murray-dejo-de-ser-el-entrenador-de-djokovic-antes-de-roland-garros"}, {"color": "#97c2fc", "id": 33, "label": "33", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/21/los-mejores-memes-por-la-eliminacion-de-river-ante-platense-las-burlas-de-los-hinchas-de-boca-y-el-rol-de-falcon-perez-los-elegidos"}, {"color": "#97c2fc", "id": 34, "label": "34", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/03/10/quien-es-giorgio-costantini-el-volante-brasileno-al-que-gallardo-hizo-debutar-en-el-triunfo-de-river-ante-atletico-tucuman"}, {"color": "#97c2fc", "id": 35, "label": "35", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/la-decision-que-habria-tomado-el-united-con-garnacho-tras-sus-duras-criticas-por-la-derrota-en-la-final-ante-tottenham"}, {"color": "#97c2fc", "id": 36, "label": "36", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/17/angel-di-maria-anuncio-que-se-marchara-del-benfica-al-final-de-la-temporada"}, {"color": "#97c2fc", "id": 37, "label": "37", "shape": "dot", "title": "https://www.infobae.com/deportes/2024/11/27/la-historia-de-la-joya-brasilena-de-river-que-busca-el-titulo-con-la-reserva-y-ya-entreno-con-gallardo"}, {"color": "#97c2fc", "id": 38, "label": "38", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/04/28/franco-mastantuono-el-talentoso-joven-del-que-hablan-todos-los-planes-de-river-plate-y-el-interes-de-los-gigantes-de-europa"}, {"color": "#97c2fc", "id": 39, "label": "39", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/16/briatore-revelo-los-tres-pedidos-que-le-hizo-a-colapinto-para-sostenerlo-como-piloto-en-alpine"}, {"color": "#97c2fc", "id": 40, "label": "40", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/20/franco-colapinto-correra-el-gp-de-monaco-de-formula-1-este-fin-de-semana-dias-horarios-y-todos-los-detalles-de-su-actividad"}, {"color": "#97c2fc", "id": 41, "label": "41", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/07/el-controvertido-video-de-ronaldo-en-presunto-estado-de-ebriedad-que-profundizo-la-crisis-con-los-ultras-del-valladolid"}, {"color": "#97c2fc", "id": 42, "label": "42", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/el-giro-estrategico-de-la-formula-1-para-el-gran-premio-de-monaco-como-afectara-a-los-pilotos"}, {"color": "#97c2fc", "id": 43, "label": "43", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/21/el-tottenham-de-cuti-romero-se-enfrentara-al-manchester-united-de-garnacho-por-el-titulo-de-la-europa-league-hora-tv-y-formaciones"}, {"color": "#97c2fc", "id": 44, "label": "44", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/02/24/la-preocupante-situacion-economica-que-atraviesa-el-manchester-united-el-recorte-a-los-juveniles-del-club-que-llamo-la-atencion"}, {"color": "#97c2fc", "id": 45, "label": "45", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/17/el-pedido-de-colapinto-a-sus-fanaticos-tras-los-insultos-racistas-que-recibio-tsunoda-por-un-gesto-obsceno-en-imola"}, {"color": "#97c2fc", "id": 46, "label": "46", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/03/13/el-show-de-colapinto-en-el-gp-de-australia-le-hizo-probar-mate-a-vowles-repartio-galletitas-y-lanzo-un-frase-sobre-su-futuro"}, {"color": "#97c2fc", "id": 47, "label": "47", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/16/que-hace-este-tipo-la-queja-de-verstappen-por-una-maniobra-de-colapinto-en-la-segunda-practica-del-gp-de-imola"}, {"color": "#97c2fc", "id": 48, "label": "48", "shape": "dot", "title": "https://www.infobae.com/deportes/2024/11/01/la-divertida-prueba-de-williams-a-sus-mecanicos-tras-el-efecto-colapinto-que-respondieron-tras-probar-el-mate-por-primera-vez"}, {"color": "#97c2fc", "id": 49, "label": "49", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/del-me-salio-una-fortuna-sobre-el-smoking-que-uso-al-apodo-de-la-f1-y-el-mate-que-probo-gasly-el-show-de-colapinto-en-monaco"}, {"color": "#97c2fc", "id": 50, "label": "50", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/19/con-neymar-como-protagonista-carlo-ancelotti-sorprendio-con-la-prelista-de-brasil-para-las-eliminatorias-sudamericanas"}, {"color": "#97c2fc", "id": 51, "label": "51", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/16/el-gesto-obsceno-del-japones-yuki-tsunoda-a-franco-colapinto-por-entorpecerlo-en-la-pista"}, {"color": "#97c2fc", "id": 52, "label": "52", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/02/13/di-maria-en-mi-seleccion-la-exorbitante-oferta-que-rechazo-de-arabia-la-marca-que-le-quedo-por-las-criticas-y-el-gol-que-torcio-su-historia"}, {"color": "#97c2fc", "id": 53, "label": "53", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/04/26/djokovic-perdio-en-su-debut-del-masters-1000-de-madrid-contra-arnaldi-y-lanzo-una-cruda-reflexion-es-el-ciclo-de-la-vida"}, {"color": "#97c2fc", "id": 54, "label": "54", "shape": "dot", "title": "https://www.infobae.com/deportes/2025/05/22/el-argentino-nico-varrone-brillo-en-los-tests-y-esta-cada-vez-mas-cerca-de-correr-en-formula-2-sorprendio-al-equipo"}, {"color": "#97c2fc", "id": 55, "label": "55", "shape": "dot", "title": "https://www.infobae.com/deportes/2024/11/21/la-divertida-clase-de-argentino-de-franco-colapinto-a-alex-albon-la-curiosa-palabra-que-le-enseno-a-decir"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": 0, "to": 43, "value": 1}, {"arrows": "to", "from": 0, "to": 35, "value": 1}, {"arrows": "to", "from": 0, "to": 44, "value": 1}, {"arrows": "to", "from": 0, "to": 12, "value": 2}, {"arrows": "to", "from": 0, "to": 7, "value": 1}, {"arrows": "to", "from": 0, "to": 23, "value": 1}, {"arrows": "to", "from": 0, "to": 16, "value": 1}, {"arrows": "to", "from": 0, "to": 10, "value": 1}, {"arrows": "to", "from": 0, "to": 33, "value": 1}, {"arrows": "to", "from": 0, "to": 30, "value": 1}, {"arrows": "to", "from": 1, "to": 14, "value": 2}, {"arrows": "to", "from": 1, "to": 12, "value": 2}, {"arrows": "to", "from": 1, "to": 7, "value": 2}, {"arrows": "to", "from": 1, "to": 23, "value": 2}, {"arrows": "to", "from": 1, "to": 16, "value": 2}, {"arrows": "to", "from": 1, "to": 10, "value": 2}, {"arrows": "to", "from": 2, "to": 36, "value": 1}, {"arrows": "to", "from": 2, "to": 52, "value": 1}, {"arrows": "to", "from": 2, "to": 12, "value": 2}, {"arrows": "to", "from": 2, "to": 7, "value": 1}, {"arrows": "to", "from": 2, "to": 23, "value": 1}, {"arrows": "to", "from": 2, "to": 16, "value": 1}, {"arrows": "to", "from": 2, "to": 10, "value": 1}, {"arrows": "to", "from": 2, "to": 33, "value": 1}, {"arrows": "to", "from": 2, "to": 30, "value": 1}, {"arrows": "to", "from": 3, "to": 50, "value": 1}, {"arrows": "to", "from": 3, "to": 12, "value": 2}, {"arrows": "to", "from": 3, "to": 7, "value": 1}, {"arrows": "to", "from": 3, "to": 23, "value": 1}, {"arrows": "to", "from": 3, "to": 16, "value": 1}, {"arrows": "to", "from": 3, "to": 10, "value": 1}, {"arrows": "to", "from": 3, "to": 33, "value": 1}, {"arrows": "to", "from": 3, "to": 30, "value": 1}, {"arrows": "to", "from": 4, "to": 1, "value": 1}, {"arrows": "to", "from": 4, "to": 12, "value": 2}, {"arrows": "to", "from": 4, "to": 7, "value": 1}, {"arrows": "to", "from": 4, "to": 23, "value": 1}, {"arrows": "to", "from": 4, "to": 16, "value": 1}, {"arrows": "to", "from": 4, "to": 10, "value": 1}, {"arrows": "to", "from": 4, "to": 33, "value": 1}, {"arrows": "to", "from": 4, "to": 30, "value": 1}, {"arrows": "to", "from": 5, "to": 12, "value": 2}, {"arrows": "to", "from": 5, "to": 7, "value": 1}, {"arrows": "to", "from": 5, "to": 23, "value": 1}, {"arrows": "to", "from": 5, "to": 16, "value": 1}, {"arrows": "to", "from": 5, "to": 10, "value": 1}, {"arrows": "to", "from": 5, "to": 33, "value": 1}, {"arrows": "to", "from": 5, "to": 30, "value": 1}, {"arrows": "to", "from": 6, "to": 12, "value": 2}, {"arrows": "to", "from": 6, "to": 7, "value": 2}, {"arrows": "to", "from": 6, "to": 23, "value": 1}, {"arrows": "to", "from": 6, "to": 16, "value": 1}, {"arrows": "to", "from": 6, "to": 10, "value": 1}, {"arrows": "to", "from": 6, "to": 33, "value": 1}, {"arrows": "to", "from": 6, "to": 30, "value": 1}, {"arrows": "to", "from": 7, "to": 12, "value": 2}, {"arrows": "to", "from": 7, "to": 23, "value": 1}, {"arrows": "to", "from": 7, "to": 16, "value": 1}, {"arrows": "to", "from": 7, "to": 10, "value": 1}, {"arrows": "to", "from": 7, "to": 9, "value": 1}, {"arrows": "to", "from": 7, "to": 33, "value": 1}, {"arrows": "to", "from": 7, "to": 30, "value": 1}, {"arrows": "to", "from": 8, "to": 12, "value": 2}, {"arrows": "to", "from": 8, "to": 7, "value": 1}, {"arrows": "to", "from": 8, "to": 23, "value": 1}, {"arrows": "to", "from": 8, "to": 16, "value": 1}, {"arrows": "to", "from": 8, "to": 10, "value": 1}, {"arrows": "to", "from": 8, "to": 33, "value": 1}, {"arrows": "to", "from": 8, "to": 30, "value": 1}, {"arrows": "to", "from": 9, "to": 17, "value": 1}, {"arrows": "to", "from": 9, "to": 51, "value": 1}, {"arrows": "to", "from": 9, "to": 47, "value": 1}, {"arrows": "to", "from": 9, "to": 45, "value": 1}, {"arrows": "to", "from": 9, "to": 1, "value": 1}, {"arrows": "to", "from": 9, "to": 42, "value": 1}, {"arrows": "to", "from": 9, "to": 12, "value": 2}, {"arrows": "to", "from": 9, "to": 7, "value": 1}, {"arrows": "to", "from": 9, "to": 23, "value": 1}, {"arrows": "to", "from": 9, "to": 16, "value": 1}, {"arrows": "to", "from": 9, "to": 10, "value": 1}, {"arrows": "to", "from": 9, "to": 33, "value": 1}, {"arrows": "to", "from": 9, "to": 30, "value": 1}, {"arrows": "to", "from": 10, "to": 31, "value": 1}, {"arrows": "to", "from": 10, "to": 7, "value": 2}, {"arrows": "to", "from": 10, "to": 23, "value": 1}, {"arrows": "to", "from": 10, "to": 16, "value": 1}, {"arrows": "to", "from": 10, "to": 9, "value": 1}, {"arrows": "to", "from": 10, "to": 17, "value": 1}, {"arrows": "to", "from": 10, "to": 33, "value": 1}, {"arrows": "to", "from": 10, "to": 30, "value": 1}, {"arrows": "to", "from": 11, "to": 12, "value": 2}, {"arrows": "to", "from": 11, "to": 7, "value": 2}, {"arrows": "to", "from": 11, "to": 23, "value": 1}, {"arrows": "to", "from": 11, "to": 16, "value": 1}, {"arrows": "to", "from": 11, "to": 10, "value": 1}, {"arrows": "to", "from": 11, "to": 33, "value": 1}, {"arrows": "to", "from": 11, "to": 30, "value": 1}, {"arrows": "to", "from": 12, "to": 7, "value": 2}, {"arrows": "to", "from": 12, "to": 23, "value": 1}, {"arrows": "to", "from": 12, "to": 16, "value": 1}, {"arrows": "to", "from": 12, "to": 10, "value": 1}, {"arrows": "to", "from": 12, "to": 9, "value": 1}, {"arrows": "to", "from": 12, "to": 33, "value": 1}, {"arrows": "to", "from": 12, "to": 30, "value": 1}, {"arrows": "to", "from": 13, "to": 12, "value": 2}, {"arrows": "to", "from": 13, "to": 7, "value": 1}, {"arrows": "to", "from": 13, "to": 23, "value": 1}, {"arrows": "to", "from": 13, "to": 16, "value": 1}, {"arrows": "to", "from": 13, "to": 10, "value": 1}, {"arrows": "to", "from": 13, "to": 33, "value": 1}, {"arrows": "to", "from": 13, "to": 30, "value": 1}, {"arrows": "to", "from": 14, "to": 12, "value": 2}, {"arrows": "to", "from": 14, "to": 7, "value": 2}, {"arrows": "to", "from": 14, "to": 23, "value": 1}, {"arrows": "to", "from": 14, "to": 16, "value": 1}, {"arrows": "to", "from": 14, "to": 10, "value": 1}, {"arrows": "to", "from": 14, "to": 33, "value": 1}, {"arrows": "to", "from": 14, "to": 30, "value": 1}, {"arrows": "to", "from": 15, "to": 12, "value": 2}, {"arrows": "to", "from": 15, "to": 7, "value": 1}, {"arrows": "to", "from": 15, "to": 23, "value": 1}, {"arrows": "to", "from": 15, "to": 16, "value": 1}, {"arrows": "to", "from": 15, "to": 10, "value": 1}, {"arrows": "to", "from": 15, "to": 33, "value": 1}, {"arrows": "to", "from": 15, "to": 30, "value": 1}, {"arrows": "to", "from": 16, "to": 41, "value": 1}, {"arrows": "to", "from": 16, "to": 12, "value": 2}, {"arrows": "to", "from": 16, "to": 7, "value": 2}, {"arrows": "to", "from": 16, "to": 23, "value": 1}, {"arrows": "to", "from": 16, "to": 10, "value": 1}, {"arrows": "to", "from": 16, "to": 9, "value": 1}, {"arrows": "to", "from": 16, "to": 33, "value": 1}, {"arrows": "to", "from": 16, "to": 30, "value": 1}, {"arrows": "to", "from": 17, "to": 1, "value": 1}, {"arrows": "to", "from": 17, "to": 14, "value": 1}, {"arrows": "to", "from": 17, "to": 12, "value": 2}, {"arrows": "to", "from": 17, "to": 7, "value": 1}, {"arrows": "to", "from": 17, "to": 23, "value": 1}, {"arrows": "to", "from": 17, "to": 16, "value": 1}, {"arrows": "to", "from": 17, "to": 10, "value": 1}, {"arrows": "to", "from": 17, "to": 33, "value": 1}, {"arrows": "to", "from": 17, "to": 30, "value": 1}, {"arrows": "to", "from": 18, "to": 12, "value": 2}, {"arrows": "to", "from": 18, "to": 7, "value": 1}, {"arrows": "to", "from": 18, "to": 23, "value": 1}, {"arrows": "to", "from": 18, "to": 16, "value": 1}, {"arrows": "to", "from": 18, "to": 10, "value": 1}, {"arrows": "to", "from": 18, "to": 33, "value": 1}, {"arrows": "to", "from": 18, "to": 30, "value": 1}, {"arrows": "to", "from": 19, "to": 38, "value": 1}, {"arrows": "to", "from": 19, "to": 12, "value": 2}, {"arrows": "to", "from": 19, "to": 7, "value": 2}, {"arrows": "to", "from": 19, "to": 23, "value": 1}, {"arrows": "to", "from": 19, "to": 16, "value": 1}, {"arrows": "to", "from": 19, "to": 10, "value": 1}, {"arrows": "to", "from": 19, "to": 33, "value": 1}, {"arrows": "to", "from": 19, "to": 30, "value": 1}, {"arrows": "to", "from": 20, "to": 55, "value": 1}, {"arrows": "to", "from": 20, "to": 48, "value": 1}, {"arrows": "to", "from": 20, "to": 46, "value": 1}, {"arrows": "to", "from": 20, "to": 12, "value": 2}, {"arrows": "to", "from": 20, "to": 7, "value": 1}, {"arrows": "to", "from": 20, "to": 23, "value": 1}, {"arrows": "to", "from": 20, "to": 16, "value": 1}, {"arrows": "to", "from": 20, "to": 10, "value": 1}, {"arrows": "to", "from": 20, "to": 33, "value": 1}, {"arrows": "to", "from": 20, "to": 30, "value": 1}, {"arrows": "to", "from": 21, "to": 12, "value": 2}, {"arrows": "to", "from": 21, "to": 7, "value": 1}, {"arrows": "to", "from": 21, "to": 23, "value": 1}, {"arrows": "to", "from": 21, "to": 16, "value": 1}, {"arrows": "to", "from": 21, "to": 10, "value": 1}, {"arrows": "to", "from": 21, "to": 33, "value": 1}, {"arrows": "to", "from": 21, "to": 30, "value": 1}, {"arrows": "to", "from": 22, "to": 7, "value": 2}, {"arrows": "to", "from": 22, "to": 23, "value": 1}, {"arrows": "to", "from": 22, "to": 16, "value": 1}, {"arrows": "to", "from": 22, "to": 10, "value": 1}, {"arrows": "to", "from": 22, "to": 9, "value": 1}, {"arrows": "to", "from": 22, "to": 33, "value": 1}, {"arrows": "to", "from": 22, "to": 30, "value": 1}, {"arrows": "to", "from": 23, "to": 12, "value": 2}, {"arrows": "to", "from": 23, "to": 7, "value": 2}, {"arrows": "to", "from": 23, "to": 16, "value": 2}, {"arrows": "to", "from": 23, "to": 10, "value": 2}, {"arrows": "to", "from": 23, "to": 9, "value": 2}, {"arrows": "to", "from": 24, "to": 53, "value": 1}, {"arrows": "to", "from": 24, "to": 32, "value": 1}, {"arrows": "to", "from": 24, "to": 12, "value": 2}, {"arrows": "to", "from": 24, "to": 7, "value": 1}, {"arrows": "to", "from": 24, "to": 23, "value": 1}, {"arrows": "to", "from": 24, "to": 16, "value": 1}, {"arrows": "to", "from": 24, "to": 10, "value": 1}, {"arrows": "to", "from": 24, "to": 33, "value": 1}, {"arrows": "to", "from": 24, "to": 30, "value": 1}, {"arrows": "to", "from": 25, "to": 12, "value": 2}, {"arrows": "to", "from": 25, "to": 7, "value": 1}, {"arrows": "to", "from": 25, "to": 23, "value": 1}, {"arrows": "to", "from": 25, "to": 16, "value": 1}, {"arrows": "to", "from": 25, "to": 10, "value": 1}, {"arrows": "to", "from": 25, "to": 33, "value": 1}, {"arrows": "to", "from": 25, "to": 30, "value": 1}, {"arrows": "to", "from": 26, "to": 40, "value": 1}, {"arrows": "to", "from": 26, "to": 51, "value": 1}, {"arrows": "to", "from": 26, "to": 39, "value": 1}, {"arrows": "to", "from": 26, "to": 49, "value": 1}, {"arrows": "to", "from": 26, "to": 7, "value": 2}, {"arrows": "to", "from": 26, "to": 23, "value": 1}, {"arrows": "to", "from": 26, "to": 16, "value": 1}, {"arrows": "to", "from": 26, "to": 10, "value": 1}, {"arrows": "to", "from": 26, "to": 9, "value": 1}, {"arrows": "to", "from": 26, "to": 33, "value": 1}, {"arrows": "to", "from": 26, "to": 30, "value": 1}, {"arrows": "to", "from": 27, "to": 54, "value": 1}, {"arrows": "to", "from": 27, "to": 12, "value": 2}, {"arrows": "to", "from": 27, "to": 7, "value": 1}, {"arrows": "to", "from": 27, "to": 23, "value": 1}, {"arrows": "to", "from": 27, "to": 16, "value": 1}, {"arrows": "to", "from": 27, "to": 10, "value": 1}, {"arrows": "to", "from": 27, "to": 33, "value": 1}, {"arrows": "to", "from": 27, "to": 30, "value": 1}, {"arrows": "to", "from": 28, "to": 34, "value": 1}, {"arrows": "to", "from": 28, "to": 37, "value": 1}, {"arrows": "to", "from": 28, "to": 12, "value": 2}, {"arrows": "to", "from": 28, "to": 7, "value": 1}, {"arrows": "to", "from": 28, "to": 23, "value": 1}, {"arrows": "to", "from": 28, "to": 16, "value": 1}, {"arrows": "to", "from": 28, "to": 10, "value": 1}, {"arrows": "to", "from": 28, "to": 33, "value": 1}, {"arrows": "to", "from": 28, "to": 30, "value": 1}, {"arrows": "to", "from": 29, "to": 12, "value": 2}, {"arrows": "to", "from": 29, "to": 7, "value": 1}, {"arrows": "to", "from": 29, "to": 23, "value": 1}, {"arrows": "to", "from": 29, "to": 16, "value": 1}, {"arrows": "to", "from": 29, "to": 10, "value": 1}, {"arrows": "to", "from": 29, "to": 33, "value": 1}, {"arrows": "to", "from": 29, "to": 30, "value": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

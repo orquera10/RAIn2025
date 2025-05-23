@@ -92,7 +92,6 @@ for url in urls:
     if info:
         noticias.append(info)
 
-# print(len(noticias))
 
 tokens = procesar_textos(noticias)
 
